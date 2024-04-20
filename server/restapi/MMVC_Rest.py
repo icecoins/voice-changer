@@ -50,11 +50,11 @@ class MMVC_Rest:
             logger.info("[Voice Changer] MMVC_Rest initializing...")
             app_fastapi = FastAPI()
             app_fastapi.router.route_class = ValidationErrorLoggingRoute
-            app_fastapi.add_middleware(
-                TrustedOriginMiddleware,
-                allowed_origins=allowedOrigins,
-                port=port
-            )
+            # app_fastapi.add_middleware(
+            #     TrustedOriginMiddleware,
+            #     allowed_origins=allowedOrigins,
+            #     port=port
+            # )
 
             app_fastapi.mount(
                 "/front",
